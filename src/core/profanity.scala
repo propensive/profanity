@@ -53,7 +53,7 @@ object Tty:
 
   private final val noopOut: ji.PrintStream = ji.PrintStream((_ => ()): ji.OutputStream)
 
-  def capture[T](fn: Tty ?=> T)(using Log): T throws TtyError =
+  def capture[T](fn: Tty ?=> T)(using Log): T =
     Log.fine(ansi"Attempting to load ${colors.Purple}(libc) native library")
     val libc: Libc = Native.load("c", classOf[Libc]).nn
     Log.fine(ansi"Checking if process in running within a TTY")
