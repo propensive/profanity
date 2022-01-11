@@ -44,7 +44,7 @@
       "links": ["eucalyptus/core"],
       "dependencies": ["net.java.dev.jna:jna:5.10.0"],
       "sources": ["src/core", "src/java"],
-      "version": "0.2.0",
+      "version": "0.3.0",
       "docs": ["doc"]
     }
   ]
